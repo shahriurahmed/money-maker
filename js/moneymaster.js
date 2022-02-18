@@ -2,6 +2,11 @@ function addall(food, rent, clothes) {
     const sum = food + rent + clothes;
     return sum;
 }
+
+function available_balance(income, texpenses) {
+    const avail = income - texpenses;
+    return avail;
+}
 document.getElementById('calculate').addEventListener('click', function () {
     const income = document.getElementById('inputincome');
     const incomevalue = parseFloat(income.value);
@@ -27,11 +32,19 @@ document.getElementById('calculate').addEventListener('click', function () {
         const clotheserror = document.getElementById('notify-clothes');
         clotheserror.style.display = 'block';
     }
+    // calling function to calculate totalexpenses
     const totalexpenses = addall(foodvalue, rentvalue, clothesvalue);
+    // calling function to calculate available_balance
+    const available = available_balance(incomevalue, totalexpenses);
+
     if (rentvalue >= 0 && rentvalue >= 0 && clothesvalue >= 0 && foodvalue >= 0 && totalexpenses >= 0) {
 
         if (incomevalue >= totalexpenses) {
-            console.log(totalexpenses);
+
+            const show_expenses = document.getElementById('totalexoenses')
+            show_expenses.innerText = totalexpenses;
+            const show_balance = document.getElementById('balance');
+            show_balance.innerText = available;
 
         }
         else if (incomevalue < totalexpenses) {
