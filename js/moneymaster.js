@@ -50,7 +50,17 @@ document.getElementById('calculate').addEventListener('click', function () {
 
     if (rentvalue >= 0 && rentvalue >= 0 && clothesvalue >= 0 && foodvalue >= 0 && totalexpenses >= 0) {
 
+
         if (incomevalue >= totalexpenses) {
+            const incomeerror = document.getElementById('notify-income');
+            incomeerror.style.display = 'none';
+            const fooderror = document.getElementById('notify-food');
+            fooderror.style.display = 'none';
+            const renterror = document.getElementById('notify-rent');
+            renterror.style.display = 'none';
+            const clotheserror = document.getElementById('notify-clothes');
+            clotheserror.style.display = 'none';
+
 
             const show_expenses = document.getElementById('totalexoenses')
             show_expenses.innerText = totalexpenses;
@@ -77,10 +87,19 @@ document.getElementById('save').addEventListener('click', function () {
         perror.style.display = 'block';
     }
     else if (s_percentage >= 0 && s_percentage <= 100) {
+        const perror = document.getElementById('notify-savings');
+        perror.style.display = 'none';
         const my_savings = total_savings(a_balance, s_percentage);
         const savings_amount = document.getElementById('show_savings');
         savings_amount.innerText = my_savings;
+
+        const new_balance = available_balance(a_balance, my_savings);
+        const rem_balance = document.getElementById('show_rem_balance');
+        rem_balance.innerText = new_balance;
     }
+
+
+
 
 
 })
