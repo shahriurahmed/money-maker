@@ -125,7 +125,7 @@
                                 <label for="income" class="col-form-label fw-bold">Save</label>
                             </div>
                             <div class="col-auto " id="savings">
-                                <input type="number" id="inputincome" placeholder=" Enter Savings Amount">
+                                <input type="number" id="s_percent" placeholder=" Enter Savings Amount">
                             </div>
 
                             <div class="col-auto pt-1">
@@ -135,20 +135,20 @@
 
                                 <!-- save button -->
                                 <div class="col-auto pt-0">
-                                    <button class="btn btn-purple">Save</button>
+                                    <button class="btn btn-purple" id="save">Save</button>
                                 </div>
 
                             </div>
 
                             <!-- warning -->
-                            <div class=" mt-0 notify-savings">
-                                <p>Please enter valid value.</p>
+                            <div id="notify-savings" class=" mt-0 notify-savings">
+                                <p>Please enter valid value between (0-100)</p>
                             </div>
                         </div>
 
                         <!-- savings+remaining balance -->
                         <div class="custom-alignment">
-                            <h5 class="fw-bold pt-3">Saving Amount : <span>10</span></h5>
+                            <h5 class="fw-bold pt-3">Saving Amount : <span id="show_savings"></span></h5>
                             <h5 class="fw-bold">Remaining Balance : <span></span></h5>
                         </div>
 

@@ -1,12 +1,23 @@
+// function for additioon
+
 function addall(food, rent, clothes) {
     const sum = food + rent + clothes;
     return sum;
 }
 
-function available_balance(income, texpenses) {
-    const avail = income - texpenses;
+// function for subtractiopn
+function available_balance(x, y) {
+    const avail = x - y;
     return avail;
 }
+
+// find percentage
+
+function total_savings(a_balance, prcnt) {
+    const amount = (prcnt / 100) * a_balance;
+    return amount;
+}
+
 document.getElementById('calculate').addEventListener('click', function () {
     const income = document.getElementById('inputincome');
     const incomevalue = parseFloat(income.value);
@@ -50,13 +61,26 @@ document.getElementById('calculate').addEventListener('click', function () {
         else if (incomevalue < totalexpenses) {
             const calculateerror = document.getElementById('notify-calculate');
             calculateerror.style.display = 'block';
-
         }
-
-
     }
 
+})
 
+document.getElementById('save').addEventListener('click', function () {
+
+    const show_balance = document.getElementById('balance');
+    const a_balance = parseFloat(show_balance.innerText);
+    const savings_percentage = document.getElementById('s_percent').value;
+    const s_percentage = parseFloat(savings_percentage);
+    if (s_percentage < 0 || s_percentage > 100) {
+        const perror = document.getElementById('notify-savings');
+        perror.style.display = 'block';
+    }
+    else if (s_percentage >= 0 && s_percentage <= 100) {
+        const my_savings = total_savings(a_balance, s_percentage);
+        const savings_amount = document.getElementById('show_savings');
+        savings_amount.innerText = my_savings;
+    }
 
 
 })
