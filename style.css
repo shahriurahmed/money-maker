@@ -1,0 +1,91 @@
+/*---- importing font family ----*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.col1 img{
+    width: 100%;
+    height: 100%;
+    
+    /* height: 700px; */
+}
+.text-color{
+    color: purple;
+}
+.li-css{
+    list-style-type: none;
+}
+
+.notify-income{
+    color: red;
+    font-size: 15px;
+    padding-left: 88px;
+    padding-top: 0;
+    margin-top: 5px;
+     /* display: none;  */
+}
+.notify-food{
+    color: red;
+    font-size: 15px;
+    padding-left: 88px;
+    padding-top: 0;
+    margin-top: 5px;
+     /* display: none;  */
+}
+
+.notify-rent{
+    color: red;
+    font-size: 15px;
+    padding-left: 88px;
+    padding-top: 0;
+    margin-top: 5px;
+     /* display: none;  */
+}
+.notify-clothes{
+    color: red;
+    font-size: 15px;
+    padding-left: 88px;
+    padding-top: 0;
+    margin-top: 5px;
+     /* display: none;  */
+}
+.notify-savings{
+    color: red;
+    font-size: 15px;
+    padding-left: 88px;
+    padding-top: 0;
+    margin-top: 5px;
+     /* display: none;  */
+}
+h3{
+    padding-left: 74px;
+    color: purple;
+}
+
+
+#rent{
+    margin-left: 24px;
+}
+#food{
+    margin-left: 21px;
+}
+#savings{
+    margin-left: 22px;
+}
+
+.custom-alignment{
+    padding-left: 76px;
+
+}
+
+.btn-purple{
+    background-color: purple;
+    color: white;
+
+}
+
+.btn{
+    height: 35px;
+    margin-top: 0;
+}
